@@ -1,18 +1,10 @@
 [phases.setup]
 nixPkgs = [
-  "glibc",
-  "glibcLocales",
-  "gcc",
-  "python312Full",
-  "python312Packages.pip",
-  "python312Packages.setuptools",
+  "python310",
   "opencv",
-  "mesa",
-  "mesa_glu",
-  "freeglut",
-  "libGL",  # Corrected from 'libgl' to 'libGL'
+  "libGL",
   "libGLU",
-  "xorg.libX11"  # Corrected lowercase name
+  "xorg.libX11"
 ]
 
 [phases.build]
