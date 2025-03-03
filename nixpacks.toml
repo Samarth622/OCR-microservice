@@ -10,8 +10,8 @@ nixPkgs = [
   "mesa",
   "mesa_glu",
   "freeglut",
-  "libgl",
-  "libglu",
+  "libGL",  # Corrected from 'libgl' to 'libGL'
+  "libGLU",
   "xorg.libX11"  # Corrected lowercase name
 ]
 
