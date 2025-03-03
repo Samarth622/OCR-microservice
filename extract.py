@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS
 from doctr.io import DocumentFile
 from doctr.models import ocr_predictor
 import os
