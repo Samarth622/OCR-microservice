@@ -4,19 +4,24 @@ nixPkgs = [
   "glibcLocales",
   "gcc",
   "python312",
+  "python312Packages.pip",  # Ensures `pip` is installed
+  "python312Packages.setuptools",  # Helps with package installation
   "opencv",
   "mesa",
   "mesa_glu",
   "freeglut",
   "libGL",
   "libGLU",
-  "libX11"  # Corrected package name
+  "libX11"
 ]
 
 [phases.build]
 cmds = [
-  "pip install -r requirements.txt"
+  "python -m venv /opt/venv",  # Creates a virtual environment
+  "source /opt/venv/bin/activate",  # Activates the virtual environment
+  "pip install --upgrade pip setuptools wheel",  # Ensures latest pip
+  "pip install -r requirements.txt"  # Installs dependencies
 ]
 
 [start]
-cmd = "python extract.py"
+cmd = "source /opt/venv/bin/activate && python extract.py"
