@@ -3,7 +3,7 @@ nixPkgs = [
   "glibc",
   "glibcLocales",
   "gcc",
-  "python312",
+  "python312Full",
   "python312Packages.pip",
   "python312Packages.setuptools",
   "opencv",
