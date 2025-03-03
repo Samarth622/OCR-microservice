@@ -10,7 +10,7 @@ nixPkgs = [
   "freeglut",
   "libGL",
   "libGLU",
-  "libx11"
+  "libX11"  # Corrected package name
 ]
 
 [phases.build]
