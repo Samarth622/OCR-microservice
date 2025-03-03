@@ -1,7 +1,13 @@
 [phases.setup]
-nixPkgs = ["glibc", "glibcLocales", "gcc"]
-cmds = [
-  "apt-get update && apt-get install -y libgl1-mesa-glx" # Install OpenCV dependency
+nixPkgs = [
+  "glibc",
+  "glibcLocales",
+  "gcc",
+  "python312",
+  "opencv",
+  "mesa",
+  "mesa_glu",
+  "freeglut"
 ]
 
 [phases.build]
