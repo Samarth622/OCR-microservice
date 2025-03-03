@@ -12,7 +12,7 @@ nixPkgs = [
   "freeglut",
   "libgl",
   "libglu",
-  "libx11"  # Corrected lowercase name
+  "xorg.libX11"  # Corrected lowercase name
 ]
 
 [phases.build]
