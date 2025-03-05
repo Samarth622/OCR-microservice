@@ -34,6 +34,8 @@ def extract_text():
                                  for line in block.lines 
                                  for word in line.words])
 
+        print(extracted_text)
+
         return jsonify({"extracted_text": extracted_text})
     
     finally:
@@ -43,5 +45,4 @@ def extract_text():
 
 if __name__ == '__main__':
     # Use environment port for Render
-    port = int(os.environ.get("PORT", 5001))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
